@@ -35,7 +35,7 @@
     "gulp-cheerio": "^1.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vinyl-buffer": "^1.0.1",
     "watchify": "^3.11.1",
     "yarn": "^1.22.4"
