@@ -8,6 +8,24 @@
   text-transform: uppercase;
   padding-top: 12px;
   padding-bottom: 50px;
+  color: #ffffff;
+  line-height: 1.125;
+  font-size: 15px;
+
+  @include tablets {
+    font-size: 17px;
+  }
+
+  @include phones {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  @include small-phones {
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+
 }
 
 .promo__first-title {
@@ -20,6 +38,19 @@
   font-weight: 700;
   margin: 28px 0px;
   line-height: 1.1;
+  color: #ffffff;
+
+  @include tablets {
+    font-size: 28px;
+  }
+
+  @include phones {
+    font-size: 38px;
+  }
+
+  @include small-phones {
+    font-size: 20px;
+  }
 
   &::after {
     position: absolute;
@@ -28,6 +59,18 @@
     width: 25%;
     height: 2px;
     background-color: #fff;
+
+    @include tablets {
+      left: 90px;
+    }
+
+    @include phones {
+      display: none;
+    }
+
+    @include small-phones {
+      display: none;
+    }
 
   }
 
@@ -39,7 +82,20 @@
     background-color: #fff;
     right: 0;
 
+    @include tablets {
+      right: 90px;
+    }
+
+    @include phones {
+      display: none;
+    }
+
+    @include small-phones {
+      display: none;
+    }
+
   }
+
 }
 
 .promo__second-title {
@@ -47,6 +103,19 @@
   font-size: 41px;
   text-transform: uppercase;
   font-weight: 600;
+  line-height: 1.125;
+
+  @include tablets {
+    font-size: 24px;
+  }
+
+  @include phones {
+    font-size: 18px;
+  }
+
+  @include small-phones {
+    font-size: 15px;
+  }
 }
 
 .promo__second-title--orange {
@@ -55,12 +124,33 @@
   font-size: 21px;
   font-weight: 500;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 15px;
+  }
 }
 
 .promo__text {
   margin-top: 20px;
   text-align: center;
   margin-bottom: 70px;
+  color: #ffffff;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.promo__text-adaptive {
+  font-size: 15px;
+  color: #ffffff;
+  display: none;
+
+  @include phones {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .promo-anchor__link {
@@ -101,4 +191,8 @@
 
 .promo-btn {
   margin-bottom: 70px ;
+
+  @include phones {
+    margin-bottom: 40px;
+  }
 }

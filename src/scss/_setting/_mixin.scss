@@ -1,0 +1,58 @@
+@mixin tablets {
+  @media screen and (max-width: 1024px) {
+    @content
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+  @mixin small-phones {
+    @media screen and (max-width: 374px) {
+      @content
+    }
+  }
+
+@mixin orange-border {
+  position: relative;
+  font-size: 30px;
+  font-weight: 400;
+  color: #252525;
+  text-transform: uppercase;
+  line-height: 1.125;
+  text-align: center;
+  margin-bottom: 43px;
+
+  @include phones {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+
+  @include small-phones {
+    font-size: 18px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid $orange;
+    right: 40%;
+    bottom: -74%;
+    width: 19%;
+
+    @include tablets {
+      display: none;
+    }
+    
+    @include phones {
+      display: none;
+    }
+    
+    @include small-phones {
+      display: none;
+    }
+}
+}

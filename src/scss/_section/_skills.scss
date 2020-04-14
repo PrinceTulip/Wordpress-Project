@@ -1,0 +1,44 @@
+.skills {
+  background: url("../img/bg.png") no-repeat center/cover;
+  padding: 84px 0px 74px 0px;
+
+  @include tablets {
+    padding: 60px 0px 60px 0px;
+  }
+}
+
+.skills-row {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills__title {
+ @include orange-border;
+  color: #ffffff;
+}
+
+.skills_text {
+  color: #efefef;
+  font-size: 17px;
+  line-height: 1.125;
+  font-weight: 200;
+}
+
+.skills__item {
+  width: 178px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @include tablets {
+    width: 145px;
+  }
+
+  @include phones {
+    width: 350px;
+    margin-left: 20px;
+  }
+}
+
+.skills__item img {
+  padding-bottom: 25px;
+}

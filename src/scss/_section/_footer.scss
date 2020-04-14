@@ -1,0 +1,30 @@
+.footer {
+  padding: 60px 0px;
+  background-color: #1a1a1a;
+  color: #888888;
+  text-align: center;
+}
+
+.footer_link {
+  font-size: 15px;
+  color: #888888;
+  line-height: 1.125;
+  margin-right: 14px;
+
+  @include phones {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @include small-phones {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.footer__number {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.125;
+  margin-top: 10px;
+}

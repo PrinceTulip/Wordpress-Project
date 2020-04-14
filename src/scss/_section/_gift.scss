@@ -1,0 +1,33 @@
+.gift {
+  padding: 84px 0px;
+  background: $gray;
+  text-align: center;
+
+  @include tablets {
+    padding: 45px 0px;
+  }
+}
+
+.gift__img {
+  margin-bottom: 47px;
+}
+
+.gift__text {
+  margin-bottom: 57px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.125;
+  color: #252525;
+
+  @include tablets {
+    font-size: 30px;
+  }
+
+  @include phones {
+    font-size: 20px;
+  }
+
+  @include small-phones {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,54 @@
+.webinar {
+  padding: 80px 0px 65px 0px;
+  text-align: center;
+
+  @include phones {
+    padding: 65px 0px 65px 0px;
+  }
+
+  @include small-phones {
+    padding: 50px 0px 50px 0px;
+  }
+}
+
+.webinar__img {
+  margin-bottom: 40px;
+}
+
+.webinar__img img {
+
+  @include phones {
+    width: 200px;
+  }
+}
+
+.webinar__small-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #252525;
+  line-height: 1.125;
+  margin-bottom: 30px;
+}
+
+.webinar__time {
+  font-size: 36px;
+  color: #299cbd;
+  text-transform: uppercase;
+  line-height: 1.125;
+  font-weight: 600;
+  margin-bottom: 25px;
+
+  @include small-phones {
+    font-size: 33px;
+  }
+}
+
+.webinar__text {
+  color: #4a4a4a;
+  font-size: 23px;
+  line-height: 1.125;
+
+  @include small-phones {
+    font-size: 20px;
+  }
+}
