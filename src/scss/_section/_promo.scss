@@ -1,0 +1,104 @@
+.promo {
+  background: url("../img/promo-background.jpg") no-repeat center/cover;
+  padding: 40px 0px 80px;
+  text-align: center;
+}
+
+.promo__logo-text {
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 50px;
+}
+
+.promo__first-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 28px 0px;
+  line-height: 1.1;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 25%;
+    height: 2px;
+    background-color: #fff;
+
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 2px;
+    background-color: #fff;
+    right: 0;
+
+  }
+}
+
+.promo__second-title {
+  color: $orange;
+  font-size: 41px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.promo__second-title--orange {
+  display: inline-block;
+  color: $orange;
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.promo__text {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.promo-anchor__link {
+  position: relative;
+  content: "";
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 70px;
+
+  &::after {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    content: "";
+    top: 29px;
+    left: 107px;
+    width: 30px;
+    height: 19px;
+    background: url("../img/Rounded_Rectangle_1_copy_2.png");
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.promo-btn {
+  margin-bottom: 70px ;
+}
