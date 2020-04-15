@@ -97,6 +97,12 @@ function img() {
   return gulp.src(paths.src + 'img/*')
       .pipe(gulp.dest(paths.build + 'img'));
 }
+
+function favicon() {
+  return gulp.src(paths.src + 'favicon/*')
+      .pipe(gulp.dest(paths.build + 'favicon'));
+}
+
 function fonts() {
   return gulp.src(paths.src + 'fonts/**/*')
       .pipe(gulp.dest(paths.build + 'fonts'));
@@ -110,6 +116,7 @@ function watch() {
   gulp.watch(paths.src + 'js/*.js', scripts);
   gulp.watch(paths.src + '*.html', htmls);
   gulp.watch(paths.src + 'img/*', img);
+  gulp.watch(paths.src + 'favicon/*', favicon);
 }
 
 function serve() {
@@ -127,6 +134,7 @@ exports.htmls = htmls;
 exports.clean = clean;
 exports.watch = watch;
 exports.img = img;
+exports.favicon = favicon;
 exports.fonts = fonts;
 exports.svgSpriteBuild = svgSpriteBuild;
 
@@ -136,12 +144,13 @@ gulp.task('build', gulp.series(
     scripts,
     htmls,
     img,
-    fonts
+    fonts,
+    favicon
     // gulp.parallel(styles, scripts, htmls, img, fonts)
 ));
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts),
+    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts,favicon),
     gulp.parallel(watch, serve)
 ));
